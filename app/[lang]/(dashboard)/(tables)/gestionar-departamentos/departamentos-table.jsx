@@ -20,10 +20,6 @@ const DepartamentosTable = () => {
     {
       key: "nombre",
       label: "nombre"
-    },
-    {
-      key: "accion",
-      label: "acción"
     }
   ];
 
@@ -55,11 +51,6 @@ const DepartamentosTable = () => {
           <TableRow key={item.id}>
             <TableCell>{item.id}</TableCell>
             <TableCell>{item.nombre}</TableCell>
-            <TableCell className="ltr:pr-5 rtl:pl-5">
-              <Button className="p-0 h-auto hover:bg-transparent bg-transparent text-primary hover:text-primary/80  hover:underline">
-                Editar
-              </Button>
-            </TableCell>
           </TableRow>
         ))}
       </TableBody>

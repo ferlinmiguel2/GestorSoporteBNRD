@@ -3649,10 +3649,6 @@ html[dir=rtl] .react-select .select__loading-indicator {
   -moz-column-gap: 2.25rem !important;
        column-gap: 2.25rem !important;
 }
-.gap-x-\[30px\] {
-  -moz-column-gap: 30px !important;
-       column-gap: 30px !important;
-}
 .gap-y-12 {
   row-gap: 3rem !important;
 }
@@ -6747,6 +6743,10 @@ html[dir=rtl] .react-select .select__loading-indicator {
   padding-right: 1.75rem !important;
 }
 
+.last\:text-left:last-child {
+  text-align: left !important;
+}
+
 .last\:text-center:last-child {
   text-align: center !important;
 }
@@ -9256,6 +9256,10 @@ html[dir=rtl] .react-select .select__loading-indicator {
   left: calc(50% + 33px) !important;
 }
 
+:is([dir="ltr"] .ltr\:last\:text-left:last-child) {
+  text-align: left !important;
+}
+
 :is([dir="ltr"] .ltr\:last\:text-right:last-child) {
   text-align: right !important;
 }
@@ -10820,14 +10824,6 @@ html[dir=rtl] .react-select .select__loading-indicator {
 
   .lg\:h-\[calc\(100\%-170px\)\] {
     height: calc(100% - 170px) !important;
-  }
-
-  .lg\:w-1\/4 {
-    width: 25% !important;
-  }
-
-  .lg\:w-1\/5 {
-    width: 20% !important;
   }
 
   .lg\:w-24 {

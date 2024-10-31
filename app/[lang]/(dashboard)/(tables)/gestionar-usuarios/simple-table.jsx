@@ -6,7 +6,6 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table";
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
@@ -19,38 +18,22 @@ const SimpleTable = () => {
       label: "id"
     },
     {
-=======
-import { users } from "./data";
-import { Button } from "@/components/ui/button";
-
-const SimpleTable = () => {
-  const columns = [
-    {
->>>>>>> 0033b5b69 (first commit)
       key: "nombre",
       label: "nombre"
     },
     {
-<<<<<<< HEAD
       key: "apellido",
       label: "apellido"
-=======
+    },
+    {
       key: "cargo",
       label: "cargo"
->>>>>>> 0033b5b69 (first commit)
     },
     {
       key: "departamento",
       label: "departamento"
     },
     {
-<<<<<<< HEAD
-      key: "cargo",
-      label: "cargo"
-    },
-    {
-=======
->>>>>>> 0033b5b69 (first commit)
       key: "rol",
       label: "rol"
     },
@@ -59,8 +42,6 @@ const SimpleTable = () => {
       label: "acción"
     }
   ];
-<<<<<<< HEAD
-
   const [users, setUsuarios] = useState([]);
 
   useEffect(() => {
@@ -75,8 +56,6 @@ const SimpleTable = () => {
         console.error("Error al obtener los usuarios:", error);
       });
   }, []);
-=======
->>>>>>> 0033b5b69 (first commit)
   return (
     <Table>
       <TableHeader>
@@ -88,8 +67,7 @@ const SimpleTable = () => {
       </TableHeader>
       <TableBody>
         {users.map((item) => (
-          <TableRow key={item.id}>
-<<<<<<< HEAD
+          <TableRow>
             <TableCell>{item.id}</TableCell>
             <TableCell>{item.nombre}</TableCell>
             <TableCell>{item.apellido}</TableCell>
@@ -101,17 +79,6 @@ const SimpleTable = () => {
             <TableCell className="ltr:pr-5 rtl:pl-5">
               <Button className="p-0 h-auto hover:bg-transparent bg-transparent text-primary hover:text-primary/80  hover:underline">
                 Editar
-=======
-            <TableCell>{item.name}</TableCell>
-            <TableCell>{item.title}</TableCell>
-            <TableCell>{item.email}</TableCell>
-            <TableCell>
-              <span className="capitalize font-medium">{item.role}</span>
-            </TableCell>
-            <TableCell className="ltr:pr-5 rtl:pl-5">
-              <Button className="p-0 h-auto hover:bg-transparent bg-transparent text-primary hover:text-primary/80  hover:underline">
-                Edit
->>>>>>> 0033b5b69 (first commit)
               </Button>
             </TableCell>
           </TableRow>
