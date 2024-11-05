@@ -14,8 +14,10 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 const HrFormWithLabel = () => {
+  //Array para almacenar la información traída de la base de datos.
   const [departamentos, setDepartamentos] = useState([]);
 
+  //useEffect encargado de hacer el fetch a la api mediante el import del mismo desde api.js
   useEffect(() => {
     const obtenerDepartamentos = async () => {
       try {
@@ -28,6 +30,7 @@ const HrFormWithLabel = () => {
 
     obtenerDepartamentos();
   }, []);
+
   return (
     <form>
       <div className="grid grid-cols-2 gap-4">
@@ -88,8 +91,8 @@ const HrFormWithLabel = () => {
             </SelectContent>
           </Select>
         </div>
-        <div className="col-span-2 lg:pl-[160px]">
-          <Button type="submit">Submit Form</Button>
+        <div className="col-span-2 lg:pl-[300px] mt-4">
+          <Button type="submit">Enviar Usuario</Button>
         </div>
       </div>
     </form>

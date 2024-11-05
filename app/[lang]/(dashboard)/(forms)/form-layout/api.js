@@ -14,12 +14,12 @@ export const fetchDepartamentos = async () => {
   }
 };
 
-const apiRoles = "";
-export const fetchRoles = async () => {
-  try {
-    const response = await axios.get(apiRoles);
-    const data = response.data.map((rol) => ({}));
-  } catch (error) {
-    console.error("Error al traer los roles:", error);
-  }
-};
+// const apiRoles = "";
+// export const fetchRoles = async () => {
+//   try {
+//     const response = await axios.get(apiRoles);
+//     const data = response.data.map((rol) => ({}));
+//   } catch (error) {
+//     console.error("Error al traer los roles:", error);
+//   }
+// };

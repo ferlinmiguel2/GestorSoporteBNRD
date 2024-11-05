@@ -4,8 +4,8 @@ import HrFormWithLabel from "./hrform-with-label";
 const FormLayout = () => {
   return (
     <div className="space-y-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card title="Horizontal Form With Label">
+      <div className="mx-auto w-1/2">
+        <Card title="Agregar Usuario">
           <HrFormWithLabel />
         </Card>
       </div>
