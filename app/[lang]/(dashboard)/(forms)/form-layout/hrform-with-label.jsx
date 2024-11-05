@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
+
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
@@ -47,6 +47,12 @@ const HrFormWithLabel = () => {
           <Input type="text" placeholder="Apellido" id="lastname" />
         </div>
         <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
+          <Label htmlFor="cedula" className="lg:min-w-[160px]">
+            Cédula
+          </Label>
+          <Input type="number" placeholder="Cédula" id="cedula" />
+        </div>
+        <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
           <Label htmlFor="Contraseña" className="lg:min-w-[160px]">
             Contraseña
           </Label>
@@ -69,7 +75,15 @@ const HrFormWithLabel = () => {
               <SelectValue placeholder="Seleccione rol" />
             </SelectTrigger>
             <SelectContent>
-              {/* TODO: for para las opciones traidas de api */}
+              <SelectItem key="administrador" value="1">
+                Admin
+              </SelectItem>
+              <SelectItem key="usuario" value="2">
+                Usuario
+              </SelectItem>
+              <SelectItem key="tecnico" value="3">
+                Técnico
+              </SelectItem>
             </SelectContent>
           </Select>
         </div>

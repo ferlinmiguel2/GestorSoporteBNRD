@@ -11031,8 +11031,8 @@ html[dir=rtl] .react-select .select__loading-indicator {
     padding-left: 0px !important;
   }
 
-  .lg\:pl-\[160px\] {
-    padding-left: 160px !important;
+  .lg\:pl-\[300px\] {
+    padding-left: 300px !important;
   }
 
   .lg\:pr-12 {
@@ -11041,14 +11041,6 @@ html[dir=rtl] .react-select .select__loading-indicator {
 
   .lg\:pt-5 {
     padding-top: 1.25rem !important;
-  }
-
-  .lg\:pl-\[200px\] {
-    padding-left: 200px !important;
-  }
-
-  .lg\:pl-\[300px\] {
-    padding-left: 300px !important;
   }
 
   .lg\:text-2xl {
