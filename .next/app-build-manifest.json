@@ -22,15 +22,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/not-found.js"
     ],
-    "/[lang]/(dashboard)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/layout.js"
-    ],
     "/[lang]/(dashboard)/error": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/error.js"
+    ],
+    "/[lang]/(dashboard)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/layout.js"
     ],
     "/[lang]/(dashboard)/(home)/dashboard/page": [
       "static/chunks/webpack.js",
@@ -51,6 +51,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/(forms)/form-layout/layout.js"
+    ],
+    "/[lang]/(dashboard)/(invoice)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(invoice)/layout.js"
+    ],
+    "/[lang]/(dashboard)/(invoice)/create-invoice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(invoice)/create-invoice/page.js"
     ]
   }
 }

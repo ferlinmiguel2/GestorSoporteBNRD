@@ -16,11 +16,10 @@ import { useState, useEffect } from "react";
 const HrFormWithLabel = () => {
   //Array para almacenar la información traída de la base de datos.
   const [departamentos, setDepartamentos] = useState([]);
-
   const [departamentoSeleccionado, setDepartamentoSeleccionado] = useState("");
 
   const handleSelectChange = (value) => {
-    setDepartamentoSeleccionado(value);
+    setDepartamentoSeleccionado(value); // Aquí almacenamos solo el ID
   };
 
   //useEffect encargado de hacer el fetch a la api mediante el import del mismo desde api.js
@@ -99,16 +98,23 @@ const HrFormWithLabel = () => {
             Departamentos
           </Label>
           <Select
-            id="rol"
+            id="departamentos"
             value={departamentoSeleccionado}
             onValueChange={handleSelectChange}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Seleccione departamento" />
+              <SelectValue placeholder="Seleccione departamento">
+                {/* Muestra el nombre del departamento seleccionado */}
+                {departamentoSeleccionado
+                  ? departamentos.find(
+                      (depto) => depto.id === parseInt(departamentoSeleccionado)
+                    )?.nombre
+                  : "Seleccione departamento"}
+              </SelectValue>
             </SelectTrigger>
             <SelectContent style={{ maxHeight: "200px", overflowY: "auto" }}>
               {departamentos.map((depto) => (
-                <SelectItem key={depto.id} value={depto.id}>
+                <SelectItem key={depto.id} value={depto.id.toString()}>
                   {depto.nombre}
                 </SelectItem>
               ))}
