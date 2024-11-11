@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { cn, isLocationMatch } from "@/lib/utils";
 import { useSidebar, useThemeStore } from "@/store";
-import SidebarLogo from "../common/logo";
+import SidebarLogo from "@/public/images/logo/cupula.svg";
 import { menusConfig } from "@/config/menus";
 import MenuLabel from "../common/menu-label";
 import { Separator } from "@/components/ui/separator";
@@ -68,7 +68,7 @@ const MobileSidebar = ({ collapsed, className }) => {
           className,
           {
             " -left-[300px] invisible opacity-0  ": !mobileMenu,
-            " left-0 visible opacity-100  ": mobileMenu,
+            " left-0 visible opacity-100  ": mobileMenu
           }
         )}
       >
@@ -78,15 +78,18 @@ const MobileSidebar = ({ collapsed, className }) => {
             style={{ backgroundImage: `url(${sidebarBg})` }}
           ></div>
         )}
-        <SidebarLogo collapsed={collapsed} />
+        <div className="flex justify-center mt-2">
+          <SidebarLogo collapsed={collapsed} className="" />
+        </div>
+
         <ScrollArea
           className={cn("sidebar-menu  h-[calc(100%-80px)] ", {
-            "px-4": !collapsed,
+            "px-4": !collapsed
           })}
         >
           <ul
             className={cn("", {
-              " space-y-2 text-center": collapsed,
+              " space-y-2 text-center": collapsed
             })}
           >
             {menus.map((item, i) => (

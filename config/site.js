@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Bienes Nacionales",
   description: null,
-  theme: "violet",
+  theme: "blue",
   layout: "vertical",
   // semi-box, horizontal, vertical
   hideSideBar: false,

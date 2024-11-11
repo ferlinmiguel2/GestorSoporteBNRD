@@ -83,6 +83,11 @@ export const menusConfig = {
           title: "Gestionar Usuarios",
           icon: User,
           href: "/gestionar-usuarios"
+        },
+        {
+          title: "Agregar Usuarios",
+          icon: User,
+          href: "/agregar-usuario"
         }
       ]
     },
