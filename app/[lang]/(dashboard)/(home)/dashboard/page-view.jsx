@@ -10,7 +10,7 @@ import Categoria from "./components/categoria";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import DashboardDropdown from "@/components/dashboard-dropdown";
 import DatePickerWithRange from "@/components/date-picker-with-range";
-const EcommercePageView = () => {
+const DashboardPageView = () => {
   return (
     //Contenedor de todos los componentes mostrados en el dashboard
     <div className="space-y-6">
@@ -82,4 +82,4 @@ const EcommercePageView = () => {
   );
 };
 
-export default EcommercePageView;
+export default DashboardPageView;

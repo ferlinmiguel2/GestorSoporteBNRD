@@ -22,16 +22,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/not-found.js"
     ],
-    "/[lang]/(dashboard)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/layout.js"
-    ],
-    "/[lang]/(dashboard)/error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/error.js"
-    ],
     "/[lang]/(dashboard)/(home)/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -42,15 +32,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/(home)/dashboard/layout.js"
     ],
-    "/[lang]/(dashboard)/(tables)/gestionar-usuarios/page": [
+    "/[lang]/(dashboard)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-usuarios/page.js"
+      "static/chunks/app/[lang]/(dashboard)/layout.js"
     ],
-    "/[lang]/(dashboard)/(tables)/gestionar-usuarios/layout": [
+    "/[lang]/(dashboard)/error": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-usuarios/layout.js"
+      "static/chunks/app/[lang]/(dashboard)/error.js"
+    ],
+    "/[lang]/(dashboard)/(tables)/gestionar-departamentos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-departamentos/page.js"
+    ],
+    "/[lang]/(dashboard)/(tables)/gestionar-departamentos/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-departamentos/layout.js"
     ],
     "/[lang]/(dashboard)/(forms)/agregar-usuario/page": [
       "static/chunks/webpack.js",

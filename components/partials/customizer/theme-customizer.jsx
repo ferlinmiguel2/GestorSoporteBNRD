@@ -10,7 +10,7 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  SheetTrigger
 } from "@/components/ui/sheet";
 import ThemeChange from "./theme-change";
 import SidebarChange from "./sidebar-change";
@@ -33,7 +33,7 @@ const ThemeCustomize = ({
         <Settings className="h-7 w-7 animate-spin" />
       </Button>
     </div>
-  ),
+  )
 }) => {
   const { isRtl } = useThemeStore();
 
@@ -47,7 +47,7 @@ const ThemeCustomize = ({
       >
         <SheetHeader className=" text-start border-b -mx-6 px-6 py-4 shadow-sm md:shadow-none">
           <SheetTitle className=" text-base  font-medium ">
-            Theme Customizer
+            Modificar Diseño
           </SheetTitle>
         </SheetHeader>
         <ScrollArea className="h-[calc(100%-120px)] -mx-6 px-6">
@@ -63,19 +63,6 @@ const ThemeCustomize = ({
             <FooterStyle />
           </div>
         </ScrollArea>
-        <SheetFooter className="py-4 gap-3 lg:flex justify-between hidden  ">
-          <Button asChild className="w-full">
-            <Link href="https://1.envato.market/vNaJR3">Buy Now</Link>
-          </Button>
-          <Button asChild className="w-full">
-            <Link
-              href="https://themeforest.net/user/codeshaperbd/portfolio"
-              target="__blank"
-            >
-              Our Portfolio
-            </Link>
-          </Button>
-        </SheetFooter>
       </SheetContent>
     </Sheet>
   );
