@@ -43,39 +43,43 @@ const AgregarUsuario = () => {
           <Label htmlFor="nombre" className="lg:min-w-[160px]">
             Nombre
           </Label>
-          <Input type="text" placeholder="Nombre" id="name" />
+          <Input type="text" placeholder="Nombre" id="nombre" />
         </div>
         <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
-          <Label htmlFor="lastname" className="lg:min-w-[160px]">
+          <Label htmlFor="apellido" className="lg:min-w-[160px]">
             Apellido
           </Label>
-          <Input type="text" placeholder="Apellido" id="lastname" />
+          <Input type="text" placeholder="Apellido" id="apellido" />
         </div>
         <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
-          <Label htmlFor="cedula" className="lg:min-w-[160px]">
-            Cédula
+          <Label htmlFor="nombre" className="lg:min-w-[160px]">
+            Nombre de usuario
           </Label>
-          <Input type="number" placeholder="Cédula" id="cedula" />
+          <Input type="text" placeholder="username" id="username" />
         </div>
         <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
-          <Label htmlFor="Contraseña" className="lg:min-w-[160px]">
-            Contraseña
+          <Label htmlFor="identificacion" className="lg:min-w-[160px]">
+            Identificación
           </Label>
-          <Input type="password" placeholder="Contraseña" id="password" />
+          <Input
+            type="password"
+            placeholder="identificacion"
+            id="identificacion"
+          />
         </div>
 
         <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
           <Label htmlFor="cargo" className="lg:min-w-[160px]">
             Cargo
           </Label>
-          <Input type="text" placeholder="Cargo" id="charge" />
+          <Input type="text" placeholder="Cargo" id="cargo" />
         </div>
 
         <div className="col-span-2  flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center ">
           <Label htmlFor="rol" className="lg:min-w-[160px]">
             Rol
           </Label>
-          <Select id="rol">
+          <Select id="idRol">
             <SelectTrigger>
               <SelectValue placeholder="Seleccione rol" />
             </SelectTrigger>
@@ -98,7 +102,7 @@ const AgregarUsuario = () => {
             Departamentos
           </Label>
           <Select
-            id="departamentos"
+            id="idDepartament"
             value={departamentoSeleccionado}
             onValueChange={handleSelectChange}
           >

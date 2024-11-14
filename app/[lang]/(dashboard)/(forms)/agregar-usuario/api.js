@@ -14,12 +14,31 @@ export const fetchDepartamentos = async () => {
   }
 };
 
-// const apiRoles = "";
-// export const fetchRoles = async () => {
-//   try {
-//     const response = await axios.get(apiRoles);
-//     const data = response.data.map((rol) => ({}));
-//   } catch (error) {
-//     console.error("Error al traer los roles:", error);
-//   }
-// };
+const apiPostUsuarios =
+  "https://localhost:7180/api/account/createorupdateusuario";
+
+export const handleSubmit = async (e) => {
+  e.preventDefault(); // Evita el recargo de la página
+
+  // Datos a enviar
+  const data = {
+    username: username,
+    identificacion: identificacion,
+    nombre: nombre,
+    apellido: apellido,
+    idDepartment: idDepartment,
+    cargo: cargo,
+    idRol: idRol
+  };
+
+  try {
+    // Realizar la solicitud POST
+    const response = await axios.post("https://api.example.com/login", data);
+
+    // Manejar la respuesta
+    console.log("Respuesta:", response.data);
+  } catch (error) {
+    // Manejar errores
+    console.error("Error:", error);
+  }
+};
