@@ -22,10 +22,6 @@ const SimpleTable = () => {
       label: "nombre"
     },
     {
-      key: "apellido",
-      label: "apellido"
-    },
-    {
       key: "cargo",
       label: "cargo"
     },
@@ -70,9 +66,9 @@ const SimpleTable = () => {
           <TableRow>
             <TableCell>{item.id}</TableCell>
             <TableCell>{item.nombre}</TableCell>
-            <TableCell>{item.apellido}</TableCell>
-            <TableCell>{item.departmentNombre}</TableCell>
             <TableCell>{item.cargo}</TableCell>
+            <TableCell>{item.departmentNombre}</TableCell>
+
             <TableCell>
               <span className="capitalize font-medium">{item.rolNombre}</span>
             </TableCell>

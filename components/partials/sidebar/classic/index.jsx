@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 import SingleMenuItem from "./single-menu-item";
 import SubMenuHandler from "./sub-menu-handler";
 import NestedSubMenu from "../common/nested-menus";
-import AddBlock from "../common/add-block";
 const ClassicSidebar = ({ trans }) => {
   const { sidebarBg } = useSidebar();
   const [activeSubmenu, setActiveSubmenu] = useState(null);
@@ -73,7 +72,7 @@ const ClassicSidebar = ({ trans }) => {
         {
           "w-[248px]": !collapsed,
           "w-[72px]": collapsed,
-          "shadow-md": collapsed || hovered,
+          "shadow-md": collapsed || hovered
         }
       )}
     >
@@ -88,14 +87,14 @@ const ClassicSidebar = ({ trans }) => {
 
       <ScrollArea
         className={cn("sidebar-menu  h-[calc(100%-80px)] ", {
-          "px-4": !collapsed || hovered,
+          "px-4": !collapsed || hovered
         })}
       >
         <ul
           dir={isRtl ? "rtl" : "ltr"}
           className={cn(" space-y-1", {
             " space-y-2 text-center": collapsed,
-            "text-start": collapsed && hovered,
+            "text-start": collapsed && hovered
           })}
         >
           {menus.map((item, i) => (
@@ -146,11 +145,6 @@ const ClassicSidebar = ({ trans }) => {
             </li>
           ))}
         </ul>
-        {!collapsed && (
-          <div className="-mx-2 ">
-            <AddBlock />
-          </div>
-        )}
       </ScrollArea>
     </div>
   );

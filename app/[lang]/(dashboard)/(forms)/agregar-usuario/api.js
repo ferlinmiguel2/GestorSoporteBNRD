@@ -17,28 +17,39 @@ export const fetchDepartamentos = async () => {
 const apiPostUsuarios =
   "https://localhost:7180/api/account/createorupdateusuario";
 
-export const handleSubmit = async (e) => {
-  e.preventDefault(); // Evita el recargo de la página
+// export const handleSubmit = async (e) => {
+//   try {
+//     const response = await axios.post(
+//       apiPostUsuarios, // Asegúrate de que sea un objeto JavaScript válido
+//       {
+//         headers: {
+//           "Content-Type": "application/json" // Importante para JSON
+//         }
+//       }
+//     );
+//     console.log("Formulario enviado:", response.data);
+//     alert("Formulario enviado con éxito");
+//   } catch (error) {
+//     console.error("Error al enviar el formulario:", error);
+//     alert("Hubo un error al enviar el formulario");
+//   }
+// };
 
-  // Datos a enviar
-  const data = {
-    username: username,
-    identificacion: identificacion,
-    nombre: nombre,
-    apellido: apellido,
-    idDepartment: idDepartment,
-    cargo: cargo,
-    idRol: idRol
-  };
-
+export const handleSubmit = async (formData) => {
   try {
-    // Realizar la solicitud POST
-    const response = await axios.post("https://api.example.com/login", data);
-
-    // Manejar la respuesta
-    console.log("Respuesta:", response.data);
+    const response = await axios.post(
+      apiPostUsuarios, // Endpoint de la API
+      formData, // Cuerpo de la solicitud
+      {
+        headers: {
+          "Content-Type": "application/json" // Asegura el tipo de contenido
+        }
+      }
+    );
+    console.log("Formulario enviado:", response.data);
+    alert("Formulario enviado con éxito");
   } catch (error) {
-    // Manejar errores
-    console.error("Error:", error);
+    console.error("Error al enviar el formulario:", error);
+    alert("Hubo un error al enviar el formulario");
   }
 };

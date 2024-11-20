@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 
 import { cn, isLocationMatch, getDynamicPath } from "@/lib/utils";
-import SidebarLogo from "../common/logo";
 import { menusConfig } from "@/config/menus";
 import MenuLabel from "../common/menu-label";
 import SingleMenuItem from "./single-menu-item";
@@ -12,7 +11,6 @@ import { useSidebar, useThemeStore } from "@/store";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { usePathname } from "next/navigation";
-import AddBlock from "../common/add-block";
 
 const PopoverSidebar = ({ trans }) => {
   const { collapsed, sidebarBg } = useSidebar();
@@ -72,7 +70,7 @@ const PopoverSidebar = ({ trans }) => {
         "w-[248px]": !collapsed,
         "w-[72px]": collapsed,
         "m-6 bottom-0   bg-card rounded-md": layout === "semibox",
-        "h-full   bg-card ": layout !== "semibox",
+        "h-full   bg-card ": layout !== "semibox"
       })}
     >
       {sidebarBg !== "none" && (
@@ -81,17 +79,16 @@ const PopoverSidebar = ({ trans }) => {
           style={{ backgroundImage: `url(${sidebarBg})` }}
         ></div>
       )}
-      <SidebarLogo collapsed={collapsed} />
       <Separator />
       <ScrollArea
         className={cn("sidebar-menu  h-[calc(100%-80px)] ", {
-          "px-4": !collapsed,
+          "px-4": !collapsed
         })}
       >
         <ul
           dir={isRtl ? "rtl" : "ltr"}
           className={cn(" space-y-1", {
-            " space-y-2 text-center": collapsed,
+            " space-y-2 text-center": collapsed
           })}
         >
           {menus.map((item, i) => (
@@ -139,11 +136,6 @@ const PopoverSidebar = ({ trans }) => {
             </li>
           ))}
         </ul>
-        {!collapsed && (
-          <div className="-mx-2 ">
-            <AddBlock />
-          </div>
-        )}
       </ScrollArea>
     </div>
   );

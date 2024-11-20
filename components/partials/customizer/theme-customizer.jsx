@@ -15,7 +15,7 @@ import {
 import ThemeChange from "./theme-change";
 import SidebarChange from "./sidebar-change";
 import SidebarImage from "./sidebar-image";
-import SelectLayout from "./select-layout";
+// import SelectLayout from "./select-layout";
 import SelectTheme from "./select-theme";
 import HeaderStyle from "./header-style";
 import FooterStyle from "./footer-style";
@@ -52,7 +52,7 @@ const ThemeCustomize = ({
         </SheetHeader>
         <ScrollArea className="h-[calc(100%-120px)] -mx-6 px-6">
           <div className=" space-y-8 mt-3">
-            <SelectLayout />
+            {/* <SelectLayout /> */}
             <SelectTheme />
             <RtlSwitcher />
             <ThemeChange />
