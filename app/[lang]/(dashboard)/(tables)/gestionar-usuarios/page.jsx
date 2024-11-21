@@ -1,6 +1,7 @@
 "use client";
 
 import Card from "@/components/ui/card-snippet";
+import Link from "next/link";
 import SimpleTable from "./simple-table";
 import { Button } from "@/components/ui/button";
 const TailwindUiTable = () => {
@@ -14,7 +15,9 @@ const TailwindUiTable = () => {
             </h3>
           </div>
           <div className="flex-none">
-            <Button type="button">Añadir Usuario</Button>
+            <Link href="/agregar-usuario">
+              <Button type="button">Añadir Usuario</Button>
+            </Link>
           </div>
         </div>
         <SimpleTable />

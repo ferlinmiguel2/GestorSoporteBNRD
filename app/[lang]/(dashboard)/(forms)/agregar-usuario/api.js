@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast as reToast } from "react-hot-toast";
 
 const apiDepartamentos = "https://localhost:7180/api/ticketuser/getdepartment";
 export const fetchDepartamentos = async () => {
@@ -47,9 +48,9 @@ export const handleSubmit = async (formData) => {
       }
     );
     console.log("Formulario enviado:", response.data);
-    alert("Formulario enviado con éxito");
+    reToast.success("Usuario creado!");
   } catch (error) {
     console.error("Error al enviar el formulario:", error);
-    alert("Hubo un error al enviar el formulario");
+    reToast.error("Error al crear el usuario");
   }
 };

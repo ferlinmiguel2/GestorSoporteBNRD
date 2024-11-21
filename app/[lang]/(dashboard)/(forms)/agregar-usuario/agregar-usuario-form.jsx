@@ -185,10 +185,19 @@ const AgregarUsuario = () => {
     e.preventDefault();
     console.log("Datos del formulario:", formData); // Verifica si idDepartment tiene un valor
     handleSubmit(formData);
+
+    setFormData({
+      nombre: "",
+      username: "",
+      identificacion: "",
+      cargo: "",
+      idRol: "",
+      idDepartment: ""
+    });
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form id="formularioCrearUsuario" onSubmit={onSubmit}>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
           <Label htmlFor="nombre" className="lg:min-w-[160px]">
@@ -210,7 +219,7 @@ const AgregarUsuario = () => {
           <Input
             type="text"
             id="username"
-            placeholder="username"
+            placeholder="Username"
             value={formData.username}
             onChange={handleChange}
           />
@@ -221,9 +230,9 @@ const AgregarUsuario = () => {
             Identificación
           </Label>
           <Input
-            type="password"
+            type="text"
             id="identificacion"
-            placeholder="identificacion"
+            placeholder="Identificacion"
             value={formData.identificacion}
             onChange={handleChange}
           />
@@ -254,15 +263,15 @@ const AgregarUsuario = () => {
               <SelectValue placeholder="Seleccione rol">
                 {{
                   1: "Admin",
-                  2: "Usuario",
-                  3: "Técnico"
+                  2: "Técnico",
+                  3: "Empleado"
                 }[formData.idRol] || "Seleccione rol"}
               </SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="1">Admin</SelectItem>
-              <SelectItem value="2">Usuario</SelectItem>
-              <SelectItem value="3">Técnico</SelectItem>
+              <SelectItem value="2">Técnico</SelectItem>
+              <SelectItem value="3">Empleado</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -294,6 +303,7 @@ const AgregarUsuario = () => {
 
         <div className="col-span-2 lg:pl-[300px] mt-4">
           <Button type="submit">Enviar Usuario</Button>
+          {function limpiarForm() {}}
         </div>
       </div>
     </form>
