@@ -74,7 +74,7 @@ const DashboardPageView = () => {
           </Card>
         </div>
         {/* Gráfico pastel sobre los tickets */}
-        <div className="col-span-12 lg:col-span-5">
+        <div className="ml-20 col-span-10 lg:col-span-5 w-full">
           <PastelProgreso />
         </div>
       </div>

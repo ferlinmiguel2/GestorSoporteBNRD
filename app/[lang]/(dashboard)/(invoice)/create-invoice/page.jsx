@@ -24,7 +24,6 @@ const InvoicePage = () => {
         </CardHeader>
         <CardContent>
           <SituacionSelect />
-          <AveriaSelect />
         </CardContent>
         <CardFooter className="flex-wrap justify-end gap-4">
           <Button

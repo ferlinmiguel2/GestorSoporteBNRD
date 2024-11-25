@@ -2066,6 +2066,9 @@ html[dir=rtl] .react-select .select__loading-indicator {
 .col-span-1 {
   grid-column: span 1 / span 1 !important;
 }
+.col-span-10 {
+  grid-column: span 10 / span 10 !important;
+}
 .col-span-12 {
   grid-column: span 12 / span 12 !important;
 }
@@ -2314,6 +2317,9 @@ html[dir=rtl] .react-select .select__loading-indicator {
 }
 .ml-2 {
   margin-left: 0.5rem !important;
+}
+.ml-20 {
+  margin-left: 5rem !important;
 }
 .ml-3 {
   margin-left: 0.75rem !important;
