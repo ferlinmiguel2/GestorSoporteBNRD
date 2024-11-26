@@ -5,7 +5,7 @@ const apiProblemas = "https://localhost:7180/api/ticketuser/gettipoproblema";
 export const fetchAverias = async () => {
   try {
     const response = await axios.get(apiProblemas, {
-      params: { situacion }
+      params: { tipoProblema }
     });
     setOpcionesAverias(response.data.averias);
   } catch (err) {
