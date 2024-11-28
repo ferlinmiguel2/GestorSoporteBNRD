@@ -18,24 +18,6 @@ export const fetchDepartamentos = async () => {
 const apiPostUsuarios =
   "https://localhost:7180/api/account/createorupdateusuario";
 
-// export const handleSubmit = async (e) => {
-//   try {
-//     const response = await axios.post(
-//       apiPostUsuarios, // Asegúrate de que sea un objeto JavaScript válido
-//       {
-//         headers: {
-//           "Content-Type": "application/json" // Importante para JSON
-//         }
-//       }
-//     );
-//     console.log("Formulario enviado:", response.data);
-//     alert("Formulario enviado con éxito");
-//   } catch (error) {
-//     console.error("Error al enviar el formulario:", error);
-//     alert("Hubo un error al enviar el formulario");
-//   }
-// };
-
 export const handleSubmit = async (formData) => {
   try {
     const response = await axios.post(
