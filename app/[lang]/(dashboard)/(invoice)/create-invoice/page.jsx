@@ -16,7 +16,7 @@ import Link from "next/link";
 const InvoicePage = () => {
   return (
     <div className="grid place-items-center">
-      <Card className="col-span-12 xl:col-span-12">
+      <Card className="col-span-12 xl:col-span-12 w-full">
         <CardHeader className="sm:flex-row sm:items-center gap-3">
           <div className="flex-1 text-xl font-medium text-default-700 whitespace-nowrap">
             Informar Situación
