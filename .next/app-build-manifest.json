@@ -42,16 +42,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/(home)/dashboard/layout.js"
     ],
-    "/[lang]/(dashboard)/(forms)/agregar-usuario/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/(forms)/agregar-usuario/page.js"
-    ],
-    "/[lang]/(dashboard)/(forms)/agregar-usuario/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/(forms)/agregar-usuario/layout.js"
-    ],
     "/[lang]/(dashboard)/(invoice)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
