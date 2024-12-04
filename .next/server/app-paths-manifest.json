@@ -1,5 +1,9 @@
 {
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/[lang]/page": "app/[lang]/page.js",
-  "/[lang]/(dashboard)/(home)/dashboard/page": "app/[lang]/(dashboard)/(home)/dashboard/page.js"
+  "/[lang]/(dashboard)/(tables)/gestionar-usuarios/page": "app/[lang]/(dashboard)/(tables)/gestionar-usuarios/page.js",
+  "/[lang]/(dashboard)/(tables)/gestionar-departamentos/page": "app/[lang]/(dashboard)/(tables)/gestionar-departamentos/page.js",
+  "/[lang]/(dashboard)/(home)/dashboard/page": "app/[lang]/(dashboard)/(home)/dashboard/page.js",
+  "/[lang]/(dashboard)/(invoice)/create-invoice/page": "app/[lang]/(dashboard)/(invoice)/create-invoice/page.js"
 }
