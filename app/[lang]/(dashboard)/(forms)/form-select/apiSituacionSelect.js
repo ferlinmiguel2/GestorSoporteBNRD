@@ -1,7 +1,5 @@
 // import axios from "axios";
 
-const apiProblemas = "https://localhost:7180/api/ticketuser/gettipoproblema";
-
 // export const fetchProblemas = async () => {
 //   try {
 //     const response = await axios.get(apiProblemas);
@@ -24,19 +22,27 @@ const apiProblemas = "https://localhost:7180/api/ticketuser/gettipoproblema";
 //     throw new Error("Error al obtener averías.");
 //   }
 // };
-
-export const fetchProblemas = async () => {
-  const response = await fetch(apiProblemas);
+const apiTipoProblemas =
+  "https://localhost:7180/api/ticketuser/gettipoproblema";
+export const fetchTipoProblema = async () => {
+  const response = await fetch(apiTipoProblemas);
   if (!response.ok) throw new Error("Error al cargar los problemas.");
   return await response.json();
 };
 
-const apiAverias = "https://localhost:7180/api/ticketuser/getproblemas";
+const apiAverias = "https://localhost:7180/api/ticketuser/getproblema";
 
-export const fetchAverias = async (idProblema) => {
-  const url = `${apiAverias}/${idProblema}`;
+// export const fetchProblema = async (Id) => {
+//   const url = `${apiAverias}/${Id}`;
+//   const response = await fetch(url);
+//   console.log(response);
+//   if (!response.ok) throw new Error("Error al cargar las averías.");
+//   return await response.json();
+// };
+
+const fetchProblema = async (Id) => {
+  const url = `${apiAverias}/${Id}`;
   const response = await fetch(url);
-  console.log(response);
   if (!response.ok) throw new Error("Error al cargar las averías.");
   return await response.json();
 };
