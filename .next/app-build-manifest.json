@@ -22,16 +22,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/not-found.js"
     ],
-    "/[lang]/(dashboard)/(home)/dashboard/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/(home)/dashboard/page.js"
-    ],
-    "/[lang]/(dashboard)/(home)/dashboard/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lang]/(dashboard)/(home)/dashboard/layout.js"
-    ],
     "/[lang]/(dashboard)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -41,6 +31,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/error.js"
+    ],
+    "/[lang]/(dashboard)/(home)/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(home)/dashboard/page.js"
+    ],
+    "/[lang]/(dashboard)/(home)/dashboard/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(home)/dashboard/layout.js"
     ],
     "/[lang]/(dashboard)/(invoice)/layout": [
       "static/chunks/webpack.js",
@@ -61,6 +61,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-usuarios/layout.js"
+    ],
+    "/[lang]/(dashboard)/(forms)/agregar-usuario/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(forms)/agregar-usuario/page.js"
+    ],
+    "/[lang]/(dashboard)/(forms)/agregar-usuario/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(forms)/agregar-usuario/layout.js"
     ],
     "/[lang]/(dashboard)/(tables)/gestionar-departamentos/page": [
       "static/chunks/webpack.js",

@@ -1,6 +1,7 @@
 // "use client";
+
 // import { Label } from "@/components/ui/label";
-// import { fetchProblemas, fetchAverias } from "./apiSituacionSelect";
+// import { fetchTipoProblema, fetchProblema } from "./apiSituacionSelect";
 // import { useEffect, useState } from "react";
 // import {
 //   Select,
@@ -11,20 +12,20 @@
 // } from "@/components/ui/select";
 
 // const SituacionSelect = () => {
-//   const [problemas, setProblemas] = useState([]); // Lista de problemas desde la API
-//   const [selectedProblema, setSelectedProblema] = useState(""); // Problema seleccionado
-//   const [averias, setAverias] = useState([]); // Lista de averías del problema seleccionado
-//   const [loadingProblemas, setLoadingProblemas] = useState(false);
-//   const [loadingAverias, setLoadingAverias] = useState(false);
-//   const [error, setError] = useState("");
+//   const [problemas, setProblemas] = useState([]); // Lista de problemas
+//   const [selectedProblema, setSelectedProblema] = useState(""); // ID del problema seleccionado
+//   const [averias, setAverias] = useState([]); // Lista de averías relacionadas
+//   const [loadingProblemas, setLoadingProblemas] = useState(false); // Indicador de carga para problemas
+//   const [loadingAverias, setLoadingAverias] = useState(false); // Indicador de carga para averías
+//   const [error, setError] = useState(""); // Manejo de errores
 
-//   Cargar los problemas al montar el componente
+//   // Cargar problemas al montar el componente
 //   useEffect(() => {
 //     const fetchAllProblemas = async () => {
 //       setLoadingProblemas(true);
 //       setError("");
 //       try {
-//         const problemasData = await fetchProblemas();
+//         const problemasData = await fetchTipoProblema();
 //         setProblemas(problemasData);
 //       } catch (err) {
 //         setError("Error al cargar los problemas.");
@@ -36,17 +37,18 @@
 //     fetchAllProblemas();
 //   }, []);
 
-//   Manejar la selección de un problema
-//   const handleProblemaChange = async (value) => {
-//     setSelectedProblema(value);
+//   // Manejo del cambio en el select de problema
+//   const handleProblemaChange = async (id) => {
+//     setSelectedProblema(id); // Establecer el ID del problema seleccionado
+//     setAverias([]); // Limpiar averías previas
 //     setLoadingAverias(true);
 //     setError("");
+
 //     try {
-//       const averiasData = await fetchAverias(value);
+//       const averiasData = await fetchProblema(id); // Enviar el ID como parámetro
 //       setAverias(averiasData);
 //     } catch (err) {
 //       setError("Error al cargar las averías.");
-//       setAverias([]);
 //     } finally {
 //       setLoadingAverias(false);
 //     }
@@ -54,12 +56,12 @@
 
 //   return (
 //     <div>
-//       {/* Select Tipo de Problema */}
+//       {/* Select de Problemas */}
 //       <div>
 //         <Label className="mb-3 font-medium">Tipo de Problema:</Label>
 //         <Select
 //           onValueChange={handleProblemaChange}
-//           disabled={loadingProblemas || error}
+//           disabled={loadingProblemas}
 //         >
 //           <SelectTrigger>
 //             <SelectValue
@@ -71,23 +73,24 @@
 //             />
 //           </SelectTrigger>
 //           <SelectContent>
-//             {error ? (
-//               <SelectItem disabled>Error: {error}</SelectItem>
-//             ) : (
-//               problemas.map((problema) => (
-//                 <SelectItem key={problema.id} value={problema.id}>
-//                   {problema.nombre}
-//                 </SelectItem>
-//               ))
-//             )}
+//             {problemas.map((problema) => (
+//               <SelectItem key={problema.id} value={problema.id}>
+//                 {problema.nombre}
+//               </SelectItem>
+//             ))}
 //           </SelectContent>
 //         </Select>
 //       </div>
 
-//       {/* Select Tipo de Avería */}
+//       {/* Select de Averías */}
 //       <div className="mt-5">
 //         <Label className="mb-3 font-medium">Tipo de Avería:</Label>
-//         <Select disabled={loadingAverias || !selectedProblema}>
+//         <Select
+//           disabled={loadingAverias || !selectedProblema}
+//           onValueChange={(value) =>
+//             console.log(`Avería seleccionada: ${value}`)
+//           }
+//         >
 //           <SelectTrigger>
 //             <SelectValue
 //               placeholder={
@@ -100,18 +103,17 @@
 //             />
 //           </SelectTrigger>
 //           <SelectContent>
-//             {error ? (
-//               <SelectItem disabled>Error: {error}</SelectItem>
-//             ) : (
-//               averias.map((averia) => (
-//                 <SelectItem key={averia.id} value={averia.id}>
-//                   {averia.nombre}
-//                 </SelectItem>
-//               ))
-//             )}
+//             {averias.map((averia) => (
+//               <SelectItem key={averia.id} value={averia.id}>
+//                 {averia.nombre}
+//               </SelectItem>
+//             ))}
 //           </SelectContent>
 //         </Select>
 //       </div>
+
+//       {/* Mostrar errores */}
+//       {error && <p className="text-red-500 mt-4">{error}</p>}
 //     </div>
 //   );
 // };
@@ -119,7 +121,6 @@
 // export default SituacionSelect;
 
 "use client";
-
 import { Label } from "@/components/ui/label";
 import { fetchTipoProblema, fetchProblema } from "./apiSituacionSelect";
 import { useEffect, useState } from "react";
@@ -134,6 +135,7 @@ import {
 const SituacionSelect = () => {
   const [problemas, setProblemas] = useState([]); // Lista de problemas
   const [selectedProblema, setSelectedProblema] = useState(""); // ID del problema seleccionado
+  const [selectedAveria, setSelectedAveria] = useState(""); // ID de la avería seleccionada
   const [averias, setAverias] = useState([]); // Lista de averías relacionadas
   const [loadingProblemas, setLoadingProblemas] = useState(false); // Indicador de carga para problemas
   const [loadingAverias, setLoadingAverias] = useState(false); // Indicador de carga para averías
@@ -158,15 +160,15 @@ const SituacionSelect = () => {
   }, []);
 
   // Manejo del cambio en el select de problema
-  const handleProblemaChange = async (Id) => {
-    setSelectedProblema(Id);
-    setAverias([]); // Limpiar las averías previas
-    if (!Id) return;
-
+  const handleProblemaChange = async (id) => {
+    setSelectedProblema(id); // Establecer el ID del problema seleccionado
+    setAverias([]); // Limpiar averías previas
+    setSelectedAveria(""); // Limpiar avería seleccionada
     setLoadingAverias(true);
     setError("");
+
     try {
-      const averiasData = await fetchProblema(Id); // Cargar averías dinámicamente
+      const averiasData = await fetchProblema(id); // Enviar el ID como parámetro
       setAverias(averiasData);
     } catch (err) {
       setError("Error al cargar las averías.");
@@ -175,12 +177,17 @@ const SituacionSelect = () => {
     }
   };
 
+  const handleAveriaChange = (id) => {
+    setSelectedAveria(id); // Establecer la avería seleccionada
+  };
+
   return (
     <div>
       {/* Select de Problemas */}
       <div>
         <Label className="mb-3 font-medium">Tipo de Problema:</Label>
         <Select
+          value={selectedProblema}
           onValueChange={handleProblemaChange}
           disabled={loadingProblemas}
         >
@@ -189,6 +196,9 @@ const SituacionSelect = () => {
               placeholder={
                 loadingProblemas
                   ? "Cargando problemas..."
+                  : selectedProblema
+                  ? problemas.find((p) => p.id === selectedProblema)?.nombre ||
+                    "Seleccione un problema"
                   : "Seleccione un problema"
               }
             />
@@ -208,9 +218,8 @@ const SituacionSelect = () => {
         <Label className="mb-3 font-medium">Tipo de Avería:</Label>
         <Select
           disabled={loadingAverias || !selectedProblema}
-          onValueChange={(value) =>
-            console.log(`Avería seleccionada: ${value}`)
-          }
+          value={selectedAveria}
+          onValueChange={handleAveriaChange}
         >
           <SelectTrigger>
             <SelectValue
@@ -218,7 +227,9 @@ const SituacionSelect = () => {
                 loadingAverias
                   ? "Cargando averías..."
                   : selectedProblema
-                  ? "Seleccione un tipo de avería"
+                  ? selectedAveria
+                    ? averias.find((a) => a.id === selectedAveria)?.nombre
+                    : "Seleccione un tipo de avería"
                   : "Seleccione primero un problema"
               }
             />
