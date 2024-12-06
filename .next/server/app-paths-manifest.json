@@ -1,6 +1,5 @@
 {
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/[lang]/(dashboard)/(home)/dashboard/page": "app/[lang]/(dashboard)/(home)/dashboard/page.js",
   "/[lang]/(dashboard)/(invoice)/create-invoice/page": "app/[lang]/(dashboard)/(invoice)/create-invoice/page.js",
   "/[lang]/(dashboard)/(tables)/gestionar-usuarios/page": "app/[lang]/(dashboard)/(tables)/gestionar-usuarios/page.js",
