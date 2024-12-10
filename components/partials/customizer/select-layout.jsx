@@ -9,26 +9,19 @@ import { VerticalSvg, HorizontalSvg, SemiBoxSvg } from "@/components/svg";
 import { Icon } from "@iconify/react";
 const layoutOptions = [
   {
-    key: "vertical",
-    label: "Vertical",
-    svg: (
-      <VerticalSvg className="[&>rect]:fill-default-300 [&>circle]:fill-default-400 [&>path]:fill-default-400" />
-    ),
-  },
-  {
     key: "horizontal",
     label: "Horizontal",
     svg: (
       <HorizontalSvg className="[&>rect]:fill-default-300 [&>circle]:fill-default-400 [&>path]:fill-default-400" />
-    ),
+    )
   },
   {
     key: "semibox",
     label: "Semi-Box",
     svg: (
       <SemiBoxSvg className="[&>rect]:fill-default-300 [&>circle]:fill-default-400 [&>path]:fill-default-400" />
-    ),
-  },
+    )
+  }
 ];
 
 const SelectLayout = () => {
@@ -42,7 +35,7 @@ const SelectLayout = () => {
       style={{
         "--theme-primary": `hsl(${
           newTheme?.cssVars[mode === "dark" ? "dark" : "light"].primary
-        })`,
+        })`
       }}
     >
       <div className="mb-2 relative inline-block px-3 py-[3px] rounded-md before:bg-[--theme-primary] before:absolute before:top-0 before:left-0 before:w-full  before:h-full before:rounded before:opacity-10 before:z-[-1]  text-[--theme-primary]  text-xs font-medium">
@@ -60,7 +53,7 @@ const SelectLayout = () => {
                 "text-[--theme-primary] border-[--theme-primary]":
                   layout === layoutOption.key,
                 "text-muted-foreground border-border":
-                  layout !== layoutOption.key,
+                  layout !== layoutOption.key
               })}
             >
               {layout === layoutOption.key && (

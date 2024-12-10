@@ -6,15 +6,6 @@ export const fetchTipoProblema = async () => {
   return await response.json();
 };
 
-// const apiAverias = "https://localhost:7180/api/ticketuser/getproblema";
-// export const fetchProblema = async (idTipoProblema) => {
-//   // const url = `${apiAverias}/${idTipoProblema}`;
-//   const response = await fetch(apiAverias);
-//   console.log(response);
-//   if (!response.ok) throw new Error("Error al cargar las averías.");
-//   return await response.json();
-// };
-
 const apiAverias = "https://localhost:7180/api/ticketuser/getproblema";
 
 export const fetchProblema = async (idTipoProblema) => {
