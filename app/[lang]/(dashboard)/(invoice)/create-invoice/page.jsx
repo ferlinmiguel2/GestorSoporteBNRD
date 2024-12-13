@@ -26,7 +26,7 @@ const InvoicePage = () => {
           <SituacionSelect />
         </CardContent>
         <CardFooter className="flex-wrap justify-end gap-4">
-          <Button
+          {/* <Button
             asChild
             className="group hover:bg-default-200 hover:text-default-900 text-xs font-semibold whitespace-nowrap"
           >
@@ -37,7 +37,7 @@ const InvoicePage = () => {
               />{" "}
               Enviar Ticket
             </Link>
-          </Button>
+          </Button> */}
         </CardFooter>
       </Card>
     </div>
