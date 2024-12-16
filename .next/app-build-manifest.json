@@ -51,6 +51,36 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[lang]/(dashboard)/(invoice)/create-invoice/page.js"
+    ],
+    "/[lang]/(dashboard)/(forms)/agregar-usuario/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(forms)/agregar-usuario/page.js"
+    ],
+    "/[lang]/(dashboard)/(forms)/agregar-usuario/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(forms)/agregar-usuario/layout.js"
+    ],
+    "/[lang]/(dashboard)/(tables)/gestionar-usuarios/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-usuarios/page.js"
+    ],
+    "/[lang]/(dashboard)/(tables)/gestionar-usuarios/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-usuarios/layout.js"
+    ],
+    "/[lang]/(dashboard)/(tables)/gestionar-departamentos/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-departamentos/layout.js"
+    ],
+    "/[lang]/(dashboard)/(tables)/gestionar-departamentos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lang]/(dashboard)/(tables)/gestionar-departamentos/page.js"
     ]
   }
 }
