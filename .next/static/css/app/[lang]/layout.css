@@ -6937,6 +6937,11 @@ html[dir=rtl] .react-select .select__loading-indicator {
   border-color: hsl(var(--warning) / var(--tw-border-opacity)) !important;
 }
 
+.hover\:border-gray-400:hover {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity)) !important;
+}
+
 .hover\:bg-\[\#1877F2\]\/90:hover {
   background-color: rgb(24 119 242 / 0.9) !important;
 }
@@ -7120,6 +7125,11 @@ html[dir=rtl] .react-select .select__loading-indicator {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:bg-blue-500:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity)) !important;
 }
 
 .hover\:bg-opacity-10:hover {
@@ -7344,6 +7354,11 @@ html[dir=rtl] .react-select .select__loading-indicator {
   border-color: rgb(161 98 7 / var(--tw-border-opacity)) !important;
 }
 
+.focus\:border-blue-500:focus {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity)) !important;
+}
+
 .focus\:bg-accent:focus {
   --tw-bg-opacity: 1 !important;
   background-color: hsl(var(--accent) / var(--tw-bg-opacity)) !important;
@@ -7467,6 +7482,11 @@ html[dir=rtl] .react-select .select__loading-indicator {
 .focus\:ring-ring:focus {
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: hsl(var(--ring) / var(--tw-ring-opacity)) !important;
+}
+
+.focus\:ring-blue-500:focus {
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity)) !important;
 }
 
 .focus\:ring-offset-0:focus {
